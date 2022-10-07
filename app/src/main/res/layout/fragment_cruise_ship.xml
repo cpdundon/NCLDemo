@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/dataGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="tvShipName, tvPassengerCapacity, tvCrewCount, tvShipInauguralDate" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/shipButtonGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="btnBlissInfo, btnSkyInfo, btnEscapeInfo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvShipName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="start"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintBottom_toTopOf="@id/tvPassengerCapacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPassengerCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="start"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintBottom_toTopOf="@id/tvCrewCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShipName" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCrewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="start"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintBottom_toTopOf="@id/tvShipInauguralDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPassengerCapacity" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvShipInauguralDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCrewCount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@id/btnSkyInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSkyInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sky"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnBlissInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShipInauguralDate"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBlissInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bliss"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnEscapeInfo"
+        app:layout_constraintStart_toEndOf="@id/btnSkyInfo"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEscapeInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/escape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBlissInfo"
+        app:layout_constraintTop_toBottomOf="@id/tvShipInauguralDate"
+        app:layout_constraintVertical_bias="1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnBlissInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

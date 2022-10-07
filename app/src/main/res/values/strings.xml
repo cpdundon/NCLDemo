@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Norwegian Cruise Lines</string>
+
+    <string name="ship_name">Ship Name: %s</string>
+    <string name="passenger_capacity">Passenger Capacity: %s</string>
+    <string name="crew">Crew: %s</string>
+    <string name="inaugural_date">Inaugural Date: %s</string>
+    <string name="sky">SKY</string>
+    <string name="bliss">BLISS</string>
+    <string name="escape">Escape</string>
+    <string name="no_data">Could not get ship data.</string>
+    <string name="instructions">Tap a button for ship information.</string>
+</resources>
